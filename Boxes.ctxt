@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=Boxes
+comment0.text=\ class\ Boxes\r\n\r\n\ The\ important\ thing\ that\ we\ need\ to\ do\ in\ this\ class\ is\ finish\ the\r\n\ 'paint'\ method.\ \ \r\n
+comment1.params=g
+comment1.target=void\ paint(java.awt.Graphics)
+comment1.text=\ the\ "paint"\ method,\ that\ specifies\ what\ to\ draw\ on\ the\ screen\r\n\ \r\n\ This\ method\ needs\ to\ be\ updated\r\n
+comment2.params=g
+comment2.target=void\ drawBorder(java.awt.Graphics)
+comment2.text=\ Context\:\ Students\ have\ to\ do\ a\ lot\ of\ guessing\ about\ coordinates.\ I\ do\ want\ them\ to\ understand\ the\ coordinate\ axes\ \r\n\ (i.e.,\ origin\ at\ top-left,\ x\ increases\ to\ the\ right,\ y\ increases\ down).\ \ \r\n\ \r\n\ Importance\:\ This\ method\ displays\ borders\ on\ the\ screen\ with\ text\ demonstrating\ the\ label\ of\ origin,\ X-axis,\r\n\ and\ Y-axis\ with\ the\ color\ magenta.\ This\ will\ help\ students\ understand\ coordinate\ axes\ such\ as\ where\ (0,0),\ \r\n\ (600,0),\ and\ (0,600)\ are\ positioned.\ In\ addition,\ the\ color\ used\ --\ magenta,\ is\ distinct\ from\ the\ colors\r\n\ required\ in\ the\ lab.\ It\ was\ carefully\ selected\ so\ that\ students\ can\ distinguish\ these\ different\ colors\ to\ \r\n\ differentiate\ the\ borders\ and\ the\ three\ concentric\ boxes\ that\ are\ required\ for\ the\ lab.\r\n\ \r\n\ Justification\:\ this\ code\ is\ in\ a\ separate\ method\ because\ it's\ not\ code\ that\ students\r\n\ are\ supposed\ to\ modify\ for\ the\ checkpoint.\ It\ also\ makes\ it\ less\ confusing\ for\ students\ because\ the\ \r\n\ method\ contains\ many\ lines\ of\ code\ that\ are\ similar\ to\ what\ the\ students\ are\ assigned\ to\r\n\ implement.\r\n
+comment3.params=args
+comment3.target=void\ main(java.lang.String[])
+comment3.text=\r\n\ main\r\n\r\n\ All\ Java\ programs\ start\ with\ a\ method\ named\ main.\ \ This\ class'\ main\r\n\ method\ creates\ the\ window\ to\ display\ your\ Java\ drawing.\r\n\r\n\ IMPORTANT\:\ \ DO\ NOT\ MODIFY\ THIS\ METHOD\r\n
+numComments=4
