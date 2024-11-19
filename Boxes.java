@@ -23,10 +23,17 @@ public class Boxes extends Canvas
         //This line is important, don't remove it!
         super.paint(g);
         
-        /** Justification: I added additional notes such as // START OF SECTION
-         * and modified other notes to identify areas in which students need to write
-         * code for the lab due to the method that I have created (which will be explained
-         * below)
+        /** Importance: I added new notes such as // START OF SECTION and // END OF SECTION
+         * and revised other notes to clearly identify areas in which students need to write
+         * code for the checkpoint due to the method that I have created (explained in drawBorder method)
+         * 
+         * Justification and Context: Generally speaking, the words that "pop" out often times are the ones
+         * in all caps due to human psychology in perceiving larger text as more important. 
+         * Taking this into consideration, // START OF SECTION and // END OF SECTION are in all caps to
+         * make it more apparent so that when students begin reading the code and understanding 
+         * code structure (presummingly), they will know right off the bat the lines in which
+         * they should modify code so that they don't accidently modify important parts of code
+         * that are responsible for overall structure and display of program
          * 
          */
         
@@ -49,9 +56,11 @@ public class Boxes extends Canvas
         
         /** Justification: drawBorder (the helper method explained below) will be overwritten by previous code
          * that fills the background with the color white. In order to display my implementation, we need
-         * to call the method at the end. In addition, since the code is placed at the end,
-         * I wrote // END OF SECTION to serve as a placeholder to identify what section the students 
-         * should begin to write and stop writing code.
+         * to call the method at the end.
+         * 
+         * Importance: This will ensure that when students work on this
+         * checkpoint, they can test boxes without worrying about the border and cause
+         * any bugs/errors to occur due to overlap with graphics.
          *
          */
         // END OF SECTION
@@ -59,19 +68,39 @@ public class Boxes extends Canvas
         
     }//paint
     
-    /** Context: Students have to do a lot of guessing about coordinates. I do want them to understand the coordinate axes 
-     * (i.e., origin at top-left, x increases to the right, y increases down).  
+    /** Context: In Lab 3, checkpoint 2, students will be asked to modify this code to create three 
+     * concentric, filled-in boxes (any size) whereas the inner box should be green; the middle box should be red; 
+     * the outer box should be blue. All boxes should be drawn on a white background. Students have to do a
+     * lot of guessing about coordinates since they don't have visual references. They will need to understand
+     * the coordinate axes (i.e., origin at top-left, x increases to the right, y increases down).
+     * Some common pitfalls are miscalculating size and position of boxes in relation to each other that
+     * in return makes graphic appear as unintended.
      * 
      * Importance: This method displays borders on the screen with text demonstrating the label of origin, X-axis,
      * and Y-axis with the color magenta. This will help students understand coordinate axes such as where (0,0), 
-     * (600,0), and (0,600) are positioned. In addition, the color used -- magenta, is distinct from the colors
-     * required in the lab. It was carefully selected so that students can distinguish these different colors to 
-     * differentiate the borders and the three concentric boxes that are required for the lab.
+     * (600,0), and (0,600) are positioned so that when students begin writing graphics for specific coordinates,
+     * they'll have a clearer idea of where it'll be positioned conceptually. Understanding the positions of the
+     * boxes and their relationship to the coordinate axes will help students in positioning shapes 
+     * accurately for the lab checkpoints. 
      * 
-     * Justification: this code is in a separate method because it's not code that students
+     * Justification: The color used -- magenta, is distinct from the colors
+     * required in the lab. It was carefully selected so that students can distinguish these different colors to 
+     * differentiate the borders and the three concentric boxes (Blue, Red, Green) that are required for the lab.
+     * 
+     * Justification: This code is in a separate method because it's not code that students
      * are supposed to modify for the checkpoint. It also makes it less confusing for students because the 
      * method contains many lines of code that are similar to what the students are assigned to
      * implement.
+     * 
+     * Importance: By providing a visual reference of the coordinate axes, students will be able to directly
+     * relate the (x, y) values to the position of the boxes they will draw in later parts of the lab. This
+     * reinforces their understanding of coordinate systems and prepares them for the next checkpoint in which they
+     * will apply these principles on more challenging problems. This will be useful for instructors and TAs,
+     * as the way this code is structured enables them to quickly check the students' understanding of 
+     * coordinate systems and their ability to manipulate graphical elements. This will reduce technical
+     * debt if students attend office hours to ask questions in relation to coordinate systems as this 
+     * information will be provided through the method implementation and explanation. In return,
+     * the workflow of TAs' and faculty will be more efficient and they can prioritize other needs.
      */
     public void drawBorder(Graphics g)
     {
