@@ -24,7 +24,7 @@ public class Boxes extends Canvas
         super.paint(g);
         
         /** Importance: I added new notes such as // START OF SECTION and // END OF SECTION
-         * and revised other notes to clearly identify areas in which students need to write
+         * and revised other notes to clearly mark the areas in which students need to write
          * code for the checkpoint due to the method that I have created (explained in drawBorder method)
          * 
          * Justification and Context: Generally speaking, the words that "pop" out often times are the ones
@@ -33,7 +33,9 @@ public class Boxes extends Canvas
          * make it more apparent so that when students begin reading the code and understanding 
          * code structure (presummingly), they will know right off the bat the lines in which
          * they should modify code so that they don't accidently modify important parts of code
-         * that are responsible for overall structure and display of program
+         * that are responsible for overall structure and display of program. In addition,
+         * the helper method is deliberately placed after the 'paint' method so the first thing
+         * students see are these markers, making it clear where to focus their changes.
          * 
          */
         
@@ -54,13 +56,20 @@ public class Boxes extends Canvas
         g.fillRect(200,200,100,100);
         
         
-        /** Justification: drawBorder (the helper method explained below) will be overwritten by previous code
-         * that fills the background with the color white. In order to display my implementation, we need
-         * to call the method at the end.
+        /** 
+         * Context: According to Lab 3, checkpoint 2, the boxes are to be drawn in a white background.
+         * This means that no pixel outside of the boxes are to be a color other than white.
          * 
-         * Importance: This will ensure that when students work on this
-         * checkpoint, they can test boxes without worrying about the border and cause
-         * any bugs/errors to occur due to overlap with graphics.
+         * Justification:  Calling the `drawBorder` method before the background is set to white would 
+         * overwrite the border with the white background, meaning that the border won't be displayed
+         * on the screen; it'll be completely covered. Therefore, in order to display my implementation, we need
+         * to call the method at the end (line 76), ensuring that borders remain visible even after execution of
+         * user graphics. This addresses an issue in the code flow and provides the rationale for why the method, 
+         * 'drawBorder', is placed at the end.
+         * 
+         * Importance: This will ensure that when students work on this checkpoint, they can test boxes
+         * without worrying about the border and cause any bugs/errors to occur due to overlap with 
+         * graphics, improving the student learning experience.
          *
          */
         // END OF SECTION
@@ -68,15 +77,18 @@ public class Boxes extends Canvas
         
     }//paint
     
-    /** Context: In Lab 3, checkpoint 2, students will be asked to modify this code to create three 
+    /** Context: Lab 3 introduces a new topic known as Graphics to students taking the introduction
+     * to CS course. Students are tasked to solve checkpoints that emphasize the importance of
+     * coordinate systems to create 2-D art based on question prompt requirements.
+     * In Lab 3, checkpoint 2, students will be asked to modify this code to create three 
      * concentric, filled-in boxes (any size) whereas the inner box should be green; the middle box should be red; 
-     * the outer box should be blue. All boxes should be drawn on a white background. Students have to do a
-     * lot of guessing about coordinates since they don't have visual references. They will need to understand
-     * the coordinate axes (i.e., origin at top-left, x increases to the right, y increases down).
+     * the outer box should be blue. All boxes should be drawn on a white background. The issue is that students
+     * have to do a lot of guessing about coordinates since they don't have visual references. They will need to understand
+     * the coordinate axes (i.e., origin at top-left, x increases to the right, y increases down) to succeed in this lab.
      * Some common pitfalls are miscalculating size and position of boxes in relation to each other that
-     * in return makes graphic appear as unintended.
+     * in return makes graphic appear as unintended. 
      * 
-     * Importance: This method displays borders on the screen with text demonstrating the label of origin, X-axis,
+     * Importance: This helper method displays borders on the screen with text demonstrating the label of origin, X-axis,
      * and Y-axis with the color magenta. This will help students understand coordinate axes such as where (0,0), 
      * (600,0), and (0,600) are positioned so that when students begin writing graphics for specific coordinates,
      * they'll have a clearer idea of where it'll be positioned conceptually. Understanding the positions of the
@@ -94,13 +106,16 @@ public class Boxes extends Canvas
      * 
      * Importance: By providing a visual reference of the coordinate axes, students will be able to directly
      * relate the (x, y) values to the position of the boxes they will draw in later parts of the lab. This
-     * reinforces their understanding of coordinate systems and prepares them for the next checkpoint in which they
+     * reinforces their understanding of coordinate systems and prepares them for the next checkpoints in which they
      * will apply these principles on more challenging problems. This will be useful for instructors and TAs,
      * as the way this code is structured enables them to quickly check the students' understanding of 
      * coordinate systems and their ability to manipulate graphical elements. This will reduce technical
-     * debt if students attend office hours to ask questions in relation to coordinate systems as this 
-     * information will be provided through the method implementation and explanation. In return,
-     * the workflow of TAs' and faculty will be more efficient and they can prioritize other needs.
+     * debt by providing students with information necessary to understand coordinate systems in a concrete level
+     * through method implemenation and explanation, making it less likely that they will need to ask related 
+     * questions or rebuttals during office hours. In return, the workflow of TAs' and faculty will be more
+     * efficient and they can prioritize other needs. Lastly, this prepares students that are interested
+     * in careers such as but not limited to: game development, scientific visualization, and robotics 
+     * -- where proficiency in coordinate-based programming is essential for success.
      */
     public void drawBorder(Graphics g)
     {
